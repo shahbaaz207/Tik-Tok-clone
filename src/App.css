@@ -1,0 +1,116 @@
+.app {
+  background-color: #000;
+  display: flex;
+  padding-top: 10px;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.video {
+  border: 1px solid lightgrey;
+  background: #fff;
+  scroll-snap-align: start;
+  width: 98%;
+  height: 100%;
+  position: relative;
+}
+
+.app_video {
+  position: absolute;
+  height: 600px;
+  overflow: scroll;
+  width: 100%;
+  max-width: 500px;
+  scroll-snap-type: y mandatory;
+}
+
+.app_video::-webkit-scrollbar {
+  display: none;
+}
+.app_video {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.video_player {
+  object-fit: fill;
+  width: 100%;
+  height: 100%;
+}
+
+
+/* videoFooter */
+.videoFooter{
+    position: relative;
+    bottom: 150px;
+    color: #fff;
+    margin-left: 20px;
+    display: flex;
+
+}
+
+.videoFooter_text{
+    flex: 1;
+    padding: 10px;
+}
+
+.videoFooter_record{
+    height: 40px;
+    filter: invert(1);
+    animation: App-logo infinite 5s linear;
+}
+
+.videoFooter_icon{
+    position: absolute;
+}
+
+.ticker{
+    margin-left: 20px;
+    height: fit-content;
+    z-index: 100;
+    width: 100%;
+    padding: 10px;
+}
+.des{
+    padding: 10px;
+    opacity: .7;
+}
+
+.videoFooter_text p,h3{
+    background: linear-gradient(to top, #f5f1ef, #f8f4f7);
+    background-clip: text;
+    padding: 0px;
+    margin-left: 10px;
+    -webkit-text-fill-color: transparent;
+}
+
+@keyframes App-logo{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+
+/* sidebar */
+
+.video__sidebar{
+    position: absolute;
+    color: #fff;
+    top: 40%;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.videoSidebar_button{
+    padding: 8px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.liked_icon{
+    color: #ff0000;
+}
